@@ -13,4 +13,6 @@ document.addEventListener("DOMContentLoaded", function(){
     document.getElementById("btnOrcamento").onclick = modalSendMail;
     document.getElementById("readMoreBtn2").onclick = readMoreBtn2;
 
+
+
 });

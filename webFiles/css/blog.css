@@ -1,0 +1,16 @@
+.divBlog {
+    display: none;
+}
+.geralBlog {
+    font-family: "Montserrat";
+}
+#dateNow {
+    text-align: center;
+}
+.geralBlog textarea {
+    height: 400px;
+    resize: none;
+}
+.geralBlog .btn {
+    margin-top: 2%;
+}

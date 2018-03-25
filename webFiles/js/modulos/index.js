@@ -62,3 +62,5 @@ function hiddenText3(){
     document.getElementById("titleCard3").style.display = "block";
     document.getElementById("textCard3").style.display = "none";
 }
+
+

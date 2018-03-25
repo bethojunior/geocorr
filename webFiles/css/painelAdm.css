@@ -1,0 +1,23 @@
+.disable {
+    display: none;
+}
+.row {
+    margin: 0;
+    padding: 0;
+}
+.menuNav{
+    background-color: #222D32;
+    color: gray;
+}
+.menuLateral{
+    height: 100%;
+    background-color: #2C3B41;
+    font-family: "Montserrat";
+}
+.menuLateral ul {
+    margin-top: 10%;
+}
+#divBlog , #divClientes , #divChat {
+    display: none;
+}
+
