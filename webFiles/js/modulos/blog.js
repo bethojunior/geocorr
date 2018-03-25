@@ -2,7 +2,6 @@ function sendPostBlog(){
     
     let titleBlog = document.getElementById("titlePost").value;
     let postBlog = document.getElementById("postBlog").value;
-    let imagem = document.getElementById("image")
     
     if(titleBlog != "" && postBlog != ""){
         new BlogController().sendDataBlog(titleBlog , postBlog , callback);
