@@ -9,11 +9,15 @@
 
     try{
         $conn = Connection::open(Connection::DB_MYSQL);
-        $query = ("INSERT INTO blog (titleBlog , postBlog , dataBlog) VALUES ('$titleBlog' , '$postBlog' , '$dataBlog') ");
-        $query = $conn->prepare($query);
-        $query -> execute();
+        $query = ("INSERT INTO blog (titleBlog , postBlog , dataBlog) VALUES (:titleBlog , :postBlog , :dataBlog) ");
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':titleBlog' , $titleBlog ,  PDO::PARAM_STR);
+        $stmt->bindParam(':postBlog'  , $postBlog ,  PDO::PARAM_STR);
+        $stmt->bindParam(':dataBlog'  , $dataBlog ,  PDO::PARAM_STR);
+        
+        $stmt -> execute();
 
-        if($query){
+        if($stmt){
             echo json_encode(['result' => true]);
             return json_encode(['result' => true]);
         }else {
