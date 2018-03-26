@@ -8,6 +8,8 @@
     $dataBlog =  date('d-m-y-H-i-s');
 
     $blog = new BlogDao();
-    echo $blog->insertPost($titleBlog , $postBlog , $dataBlog);
+    $return = $blog->insertPost($titleBlog , $postBlog , $dataBlog);
+
+    echo $return;
 
 
