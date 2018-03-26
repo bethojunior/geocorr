@@ -6,6 +6,7 @@ function sendPostBlog(){
     if(titleBlog != "" && postBlog != ""){
         new BlogController().sendDataBlog(titleBlog , postBlog , callback);
         function callback(result){
+            console.log(result);
             let data = JSON.parse(result);
             let resultData = data['result'];
 
