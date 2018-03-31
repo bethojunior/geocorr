@@ -1,8 +1,8 @@
 <div class="col l12 m12 s12 geralBlog">
 
-    <form id="formFile">
+    <form method="POST" action="../../../mvc/controller/BlogController.php" enctype="multipart/form-data">
 
-        <input name="titlePost" id="titlePost" class="col l6 m2 s12" placeholder="TITULO DO POST">
+        <input name="titleBlog" id="titlePost" class="col l6 m2 s12" placeholder="TITULO DO POST">
         
 
         <div class="col l6 file-field input-field">
@@ -11,13 +11,14 @@
                 <input type="file" id="imagem" name="imagem">
             </div>
             <div class="file-path-wrapper">
-                <input placeholder="SELECIONE UMA IMAGEM" class="file-path validate" type="text">
+                <input name="imagem" placeholder="SELECIONE UMA IMAGEM" class="file-path validate" type="text">
             </div>
         </div>
 
         <textarea name="postBlog" id="postBlog" placeholder="CONTEÚDO DO POST"></textarea>
         
-        <span id="sendPostBlog" class="btn right">POSTAR</span>
+        <!-- <span id="sendPostBlog" class="btn right">POSTAR</span> -->
+        <input type="submit" value="ENVIAR">
 
     </form>
 
