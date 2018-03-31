@@ -1,7 +1,6 @@
 <?php  
-
-
-    require "../dao/BlogDao.php";
+    include "../index.php";
+    require_once "../dao/BlogDao.php";
     date_default_timezone_set('America/Fortaleza');
 
     $titleBlog = $_POST['titleBlog'];
@@ -17,6 +16,10 @@
     $blog = new BlogDao();
     $return = $blog->insertPost($titleBlog , $postBlog , $dataBlog , $new_name);
 
-    echo $return;
-    return $return;
+    if($return){
+        echo "<script>successBlog()</script>";
+    }else {
+        echo "<script>failedBlog()</script>";
+    }
+
 

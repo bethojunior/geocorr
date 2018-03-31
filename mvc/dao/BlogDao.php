@@ -1,5 +1,5 @@
 <?php 
-    require "../service/Connection.php";
+    require_once "../service/Connection.php";
 
     class BlogDao{
         

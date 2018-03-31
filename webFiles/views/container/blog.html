@@ -2,7 +2,7 @@
 
     <form method="POST" action="../../../mvc/controller/BlogController.php" enctype="multipart/form-data">
 
-        <input name="titleBlog" id="titlePost" class="col l6 m2 s12" placeholder="TITULO DO POST">
+        <input name="titleBlog" id="titlePost" class="col l6 m2 s12" placeholder="TITULO DO POST" required>
         
 
         <div class="col l6 file-field input-field">
@@ -15,10 +15,10 @@
             </div>
         </div>
 
-        <textarea name="postBlog" id="postBlog" placeholder="CONTEÚDO DO POST"></textarea>
+        <textarea name="postBlog" id="postBlog" placeholder="CONTEÚDO DO POST" required></textarea>
         
         <!-- <span id="sendPostBlog" class="btn right">POSTAR</span> -->
-        <input type="submit" value="ENVIAR">
+        <input type="submit" class="btn right" value="ENVIAR">
 
     </form>
 

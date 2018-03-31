@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById("blog").onclick = openBlog;
         document.getElementById("clientes").onclick = openClientes;
         document.getElementById("chat").onclick = openChat;
-        document.getElementById("sendPostBlog").onclick = sendPostBlog;
+        document.getElementById("cadastrarCliente").onclick = cadastrarCliente;
     }
 
     function showNav(){
