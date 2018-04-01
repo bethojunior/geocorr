@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById("chat").onclick = openChat;
         document.getElementById("cadastrarCliente").onclick = cadastrarCliente;
         document.getElementById("sendAbout").onclick = sendAbout;
+        document.getElementById("sendAboutMission").onclick = sendAboutMission;
+        document.getElementById("sendAboutValues").onclick = sendAboutValues;
+        document.getElementById("sendAboutVision").onclick = sendAboutVision;
     }
 
     function showNav(){
