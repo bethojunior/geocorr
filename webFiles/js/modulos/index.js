@@ -1,7 +1,3 @@
-function page(){
-    alert("ok");
-}
-
 function readMoreBtn2(){
     swal("AQUI ABRIRIA UMA PÁGINA COM A INFORMAÇÃO COMPLETA ;D");
 }

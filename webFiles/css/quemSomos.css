@@ -1,0 +1,19 @@
+.divQuemSomosDashboard label {
+    font-family: "Montserrat";
+}
+
+.divQuemSomosDashboard .titleDash {
+    background-color: #dedfe1!important;
+    padding-left: 1%!important;
+    font-family: "Montserrat";
+}
+.divQuemSomosDashboard textarea{
+    background-color: #dedfe1;
+    resize: none;
+    height: 35%;
+    font-family: "Montserrat";
+    padding-left: 1%;
+}
+.divQuemSomosDashboard .btn {
+    margin: 1%;
+}

@@ -1,0 +1,13 @@
+.listDashboard {
+    font-family: "Montserrat";
+    font-size: 14pt;
+    font-weight: 200;
+}
+
+.tabs .tab a {
+    color: black!important;
+}
+
+.tabs .indicator{
+    background-color: #2C3B41;
+}

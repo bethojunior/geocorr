@@ -34,7 +34,7 @@ function getAllClients(){
     document.getElementById("nameClient").value = "";
     document.getElementById("emailClient").value = "";
     document.getElementById("passClient").value = "";
-    document.getElementById("passClient").value = "";
+    document.getElementById("passClientAgain").value = "";
 
     new ClienteController().getAll(callback);
 
@@ -99,16 +99,33 @@ function sendDataById(id , dados){
 
 //ABRE MODAL FOR DELETE CLIENT
 function deleteClient(id , data){
-    new ClienteController().deleteClient(id , callback);
-    function callback(result){
-        let data = JSON.parse(result);
-        let res = data['result'];
-        if(res){
-            openClientes();
-            swal("" , "Apagado com sucesso!" , "success");
-        }else {
-            swal("OPS.." , "Erro ao apagar" , "error");
+    swal({
+        title: "Você tem certeza?",
+        text: "Se você apagar, não irá recuperar os dados apagados!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+
+            new ClienteController().deleteClient(id , callback);
+            function callback(result){
+                let data = JSON.parse(result);
+                let res = data['result'];
+                if(res){
+                    openClientes();
+                    swal("Cliente apagado com sucesso", {
+                        icon: "success",
+                        });
+                }else {
+                    swal("OPS.." , "Erro ao apagar" , "error");
+                }
+            }
+
+        } else {
+          //
         }
-    }
+      });
 }
 

@@ -9,7 +9,9 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="../../css/painelAdm.css" rel="stylesheet">  
         <link href="../../css/blog.css" rel="stylesheet">
+        <link href="../../css/quemSomos.css" rel="stylesheet">
         <link href="../../css/clientes.css" rel="stylesheet">
+        <link href="../../css/dashboard.css" rel="stylesheet">
         <script src="../../js/libs/jquery-3.2.1.js"></script>
         <script src="../../Materialize/js/materialize.js"></script>
         <script src="../../js/libs/dropzone.js"></script>
@@ -26,14 +28,33 @@
                 $('.modal').modal();
             });
 
+
+
+            setTimeout(function(){
+
+                $(document).ready(function(){
+                $('ul.tabs').tabs();
+                });
+
+
+                $(document).ready(function(){
+                    $('.collapsible').collapsible();
+                });
+
+            },450);
+
+            
+
         </script>
     <script src="../../js/ultils/host.js"></script>
     <script src="../../js/controller/blogController.js"></script>
     <script src="../../js/controller/clientesController.js"></script>
+    <script src="../../js/controller/dashboardController.js"></script>
     <script src="../../js/modulos/initAdm.js"></script>
     <script src="../../js/modulos/painelAdm.js"></script>
     <script src="../../js/modulos/blog.js"></script>
     <script src="../../js/modulos/clientes.js"></script>
+    <script src="../../js/modulos/dashboard.js"></script>
     <script src="../../js/modulos/autoLoad.js"></script>
     <script src="../../js/ultils/sweetalert.min.js"></script>
 

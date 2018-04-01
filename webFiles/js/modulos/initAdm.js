@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById("clientes").onclick = openClientes;
         document.getElementById("chat").onclick = openChat;
         document.getElementById("cadastrarCliente").onclick = cadastrarCliente;
+        document.getElementById("sendAbout").onclick = sendAbout;
     }
 
     function showNav(){
