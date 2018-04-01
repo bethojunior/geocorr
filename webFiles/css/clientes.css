@@ -1,3 +1,45 @@
+.hidden {
+    display: none;
+}
+.divGeralClientes {
+    max-height: 430px;
+    overflow-y: auto;
+}
 .geralClientes h4 {
     font-family: "Montserrat";
+}
+#listClientes i {
+    cursor: pointer;
+}
+.divGeralClientes .labelCliente {
+    margin: 2%;
+    font-family: "Montserrat";
+    font-size: 18pt;
+    font-weight: bold;
+    text-align: center;
+}
+#modalSendFile {
+    width: 97%;
+    height: 400px;
+    padding: 2%;
+}
+#nameClientModal {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "Montserrat";
+}
+#emailClientModal {
+    cursor: pointer;
+    font-family: "Montserrat";
+}
+.formModal .btnSend {
+    margin-left: 25%;
+}
+.formModal input {
+    text-align: center;
+    text-transform: uppercase;
+}
+.formModal input::-moz-placeholder{
+    text-align: center;
+    text-transform: uppercase;
 }

@@ -1,0 +1,30 @@
+<div id="modalSendFile" class="modal">
+    
+
+        <div class="modal-content">
+
+            <h4 id="nameClientModal"></h4>
+            
+            <a id="emailClientModal" href=''></a>
+        </div>
+        
+        <form method="POST" action="../../../mvc/controller/sendFileClient.php" class="formModal" enctype="multipart/form-data">
+            <input class="hidden disable" id="idClientModal" name="idClientModal">
+            <input name="titlePostFile" class="titlePostModal col l12" placeholder="TITULO DA POSTAGEM">
+            <div class="file-field input-field col l12">
+                <div class="btn">
+                    <span>File</span>
+                    <input name="file" type="file">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+            <span class="col l4 m4 s4"></span>
+            <div class="modal-footer">
+                <input type="submit" class="btn" value="ENVIAR">
+            </div>
+        </form>
+
+</div>
+    

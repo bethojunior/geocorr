@@ -13,6 +13,7 @@ function openBlog(){
 }
 
 function openClientes(){
+    getAllClients();
     document.getElementById("divClientes").style.display = "block";
     document.getElementById("divDashboard").style.display = "none";
     document.getElementById("divBlog").style.display = "none";

@@ -12,7 +12,7 @@
         <link href="../../css/clientes.css" rel="stylesheet">
         <script src="../../js/libs/jquery-3.2.1.js"></script>
         <script src="../../Materialize/js/materialize.js"></script>
-
+        <script src="../../js/libs/dropzone.js"></script>
     </head>
 
     <body>
@@ -21,6 +21,11 @@
         <script src="../../js/ultils/import-html-w3.js"></script>
         <script>
             w3.includeHTML();
+
+            $(document).ready(function(){
+                $('.modal').modal();
+            });
+
         </script>
     <script src="../../js/ultils/host.js"></script>
     <script src="../../js/controller/blogController.js"></script>

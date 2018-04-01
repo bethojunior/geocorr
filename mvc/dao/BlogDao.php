@@ -25,4 +25,22 @@
             }
         }
 
+
+        public function getAllPosts() {
+            
+            $conn = Connection::open(Connection::DB_MYSQL);
+            $query = ("SELECT * FROM blog ORDER BY id DESC");
+            $query = $conn->prepare($query);
+            $query -> execute();
+            $all = $query->fetchAll(PDO::FETCH_OBJ);
+            
+            if($query){
+                return json_encode($all);
+            }else {
+                return json_encode($all);
+            }
+            
+    
+        }
+
     }

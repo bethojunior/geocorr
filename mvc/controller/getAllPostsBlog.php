@@ -1,20 +1,10 @@
 <?php
 
     require "../service/Connection.php";
-
-    try{
-        $conn = Connection::open(Connection::DB_MYSQL);
-        $query = ("SELECT * FROM blog ORDER BY id DESC");
-        $query = $conn->prepare($query);
-        $query -> execute();
+    require "../dao/BlogDao.php";
     
-        $all = $query->fetchAll(PDO::FETCH_OBJ);
-        $result = json_encode($all);
-    
-        echo $result;
-        return $result;
+    $posts = new BlogDao();
+    $return = $posts->getAllPosts();
 
-    }catch(Excepction $e){
-        echo $e;
-        return $e;
-    }
+    echo $return;
+    return $return;

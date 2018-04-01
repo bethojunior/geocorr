@@ -16,4 +16,16 @@ class ClienteController {
 
     }
 
+    //GET ALL CLIENTS
+    getAll(callback){
+
+        $.ajax({
+            url:LOCAL+"/controller/getAllClients.php",
+            success:function(result){
+                let data = JSON.parse(result);
+                callback(data);
+            }
+        });
+    }
+
 }
