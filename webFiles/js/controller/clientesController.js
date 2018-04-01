@@ -28,4 +28,16 @@ class ClienteController {
         });
     }
 
+    //DELETA CLIENTE PELO ID
+    deleteClient(id , callback){
+        $.ajax({
+            url:LOCAL+"/controller/DeleteCliente.php",
+            method: "POST",
+            data: {"id" : id},
+            success: function(result){
+                callback(result);
+            }
+        })
+    }
+
 }

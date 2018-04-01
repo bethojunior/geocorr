@@ -99,6 +99,16 @@ function sendDataById(id , dados){
 
 //ABRE MODAL FOR DELETE CLIENT
 function deleteClient(id , data){
-    swal(id);
+    new ClienteController().deleteClient(id , callback);
+    function callback(result){
+        let data = JSON.parse(result);
+        let res = data['result'];
+        if(res){
+            openClientes();
+            swal("" , "Apagado com sucesso!" , "success");
+        }else {
+            swal("OPS.." , "Erro ao apagar" , "error");
+        }
+    }
 }
 
