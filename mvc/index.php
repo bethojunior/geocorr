@@ -4,7 +4,3 @@
 <script src="/geocor/webFiles/js/ultils/sweetalert.min.js"></script>
 <script src="/geocor/webFiles/js/modulos/autoLoad.js"></script>
 
-<?php 
-    require "service/Connection.php";
-    require "dao/BlogDao.php";
-    require "dao/ClienteDao.php";
