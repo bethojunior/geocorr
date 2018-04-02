@@ -1,4 +1,5 @@
 <?php  
+
     require_once "../dao/BlogDao.php";
     date_default_timezone_set('America/Fortaleza');
 
