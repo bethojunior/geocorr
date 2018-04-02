@@ -1,24 +1,21 @@
 function sendPostBlog(){
-    
-    let titleBlog = document.getElementById("titlePost").value;
-    let postBlog = document.getElementById("postBlog").value;
-    
-    if(titleBlog != "" && postBlog != ""){
-        new BlogController().sendDataBlog(titleBlog , postBlog , callback);
-        function callback(result){
-            console.log(result);
-            let data = JSON.parse(result);
-            let resultData = data['result'];
 
-            if(resultData == true){
-                swal("", "POSTADO COM SUCESSO", "success");
-                document.getElementById("titlePost").value = "";
-                document.getElementById("postBlog").value = "";
-            }else {
-                swal("Erro ao postar", "TENTE NOVAMENTE MAIS TARDE!", "error");
-            }
+    var data = document.getElementById("formBlog");
+    var formD = new FormData(data);
+    
+
+    new BlogController().sendDataBlog(formD , callback);
+    function callback(result){
+        let res = JSON.parse(result);
+        let data = res['result'];
+
+        if(data == true){
+            swal("", "POSTADO COM SUCESSO", "success");
+            document.getElementById("titlePost").value = "";
+            document.getElementById("postBlog").value = "";
+        }else {
+            swal("Erro ao postar", "TENTE NOVAMENTE MAIS TARDE!", "error");
         }
-    }else {
-        swal("ops!", "Preencha todos os campos !", "error");
     }
+
 }
