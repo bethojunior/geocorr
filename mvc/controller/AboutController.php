@@ -56,6 +56,18 @@
                 return $return;
             }
 
+            //insere serviços
+            public function insertAboutService(){
+                $title = $_POST['title'];
+                $post = $_POST['post'];
+
+                $insert = new AboutDao();
+                $return = $insert->insertAboutService($title , $post);
+
+                echo $return;
+                return $return;
+            }
+
 
     }
 

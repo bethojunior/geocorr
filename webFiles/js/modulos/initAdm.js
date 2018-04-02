@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById("sendAboutValues").onclick = sendAboutValues;
         document.getElementById("sendAboutVision").onclick = sendAboutVision;
         document.getElementById("sendPostBlog").onclick = sendPostBlog;
+        document.getElementById("sendService").onclick = sendService;
     }
 
     function showNav(){

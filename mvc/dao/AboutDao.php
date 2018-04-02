@@ -90,6 +90,29 @@
 
         }
 
+        public function insertAboutService($title , $post){
+
+            try{
+                $conn = Connection::open(Connection::DB_MYSQL);
+                $query = ("INSERT INTO services (title , post) VALUES (:title , :post)");
+                $query = $conn->prepare($query);
+                $query -> bindParam(':title' , $title , PDO::PARAM_STR);
+                $query -> bindParam(':post' , $post , PDO::PARAM_STR);
+
+                $query->execute();
+
+                if($query){     
+                    return json_encode(['result' => true]);
+                }else {
+                    return json_encode(['result' => false]);
+                }
+
+            }catch(Exception $e){
+                return json_encode(['result' => false]);
+            }
+
+        }
+
 
 
 

@@ -1,0 +1,11 @@
+.divService #titleService {
+    background-color: #DEDFE1;
+}
+.divService textarea{
+    resize: none;
+    height: 35%;
+    background-color: #DEDFE1;
+}
+.divService .btn {
+    margin: 1%;
+}
