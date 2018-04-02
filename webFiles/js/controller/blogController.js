@@ -3,7 +3,7 @@ class BlogController{
     sendDataBlog(form , callback){
 
         $.ajax({
-            url:LOCAL+"/controller/BlogController.php",
+            url: LOCAL+"/controller/BlogController.php?action=insertPost",
             method:"POST",
             data: form,
             success: function(result){

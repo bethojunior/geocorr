@@ -76,6 +76,23 @@ function getAllClients(){
 
 }
 
+//envia arquivo para cliente
+function sendFileById(){
+    let form = document.getElementById("formFileClient");
+    let dataForm = new FormData(form);
+    new ClienteController().sendFile(dataForm , callback);
+    function callback(result){
+        let data = JSON.parse(result);
+        let res = data['result'];
+
+        if(res == true){
+            swal("" , "Postado com sucesso" , "success");
+        }else {
+            swal("ops.." , "Erro ao postar" , "error");
+        }
+    }
+}
+
 //ABRE PÁGINA PARA ENVIAR ARQUIVOS PARA O CLIENTE
 function sendDataById(id , dados){
     $('#modalSendFile').modal('open');
