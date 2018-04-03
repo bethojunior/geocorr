@@ -16,6 +16,10 @@ function cadUser(){
         swal("" , "As senhas não coincidem" , "error");
         return;
     }
+    document.getElementById("nameUserCad").value = "";
+    document.getElementById("emailUserCad").value = "";
+    document.getElementById("passUserCad").value = "";
+    document.getElementById("passUserCadAgain").value = "";
 
     new UserController().insertUser(name , email , pass , callback);
     
