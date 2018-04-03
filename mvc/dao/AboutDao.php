@@ -113,6 +113,53 @@
 
         }
 
+        public function getAllServices(){
+
+            try{
+                $conn = Connection::open(Connection::DB_MYSQL);
+                $query = ("SELECT * FROM services order by id DESC");
+                $query = $conn->prepare($query);
+
+                $query->execute();
+
+                $all = $query->fetchAll(PDO::FETCH_OBJ);
+
+                if($query){
+                    return json_encode($all);
+                }else {
+                    return json_encode($all);
+                }
+
+            }catch(Exception $e){
+                return json_encode($all);
+            }
+
+        }
+
+        public function updateService($id , $title , $post){
+
+            try{
+                $conn = Connection::open(Connection::DB_MYSQL);
+                $query = ("UPDATE services SET title = :title , post = :post WHERE id = :id");
+                $query = $conn->prepare($query);
+                $query -> bindParam(':title' , $title , PDO::PARAM_STR);
+                $query -> bindParam(':post' , $post , PDO::PARAM_STR);
+                $query -> bindParam(':id' , $id , PDO::PARAM_INT);
+
+                $query->execute();
+
+                if($query){
+                    return json_encode(['result' => true]);
+                }else {
+                    return json_encode(['result' => false]);
+                }
+
+            }catch(Exception $e){
+                return json_encode(['result' => false]);
+            }   
+
+        }
+
 
 
 

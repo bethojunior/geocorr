@@ -68,6 +68,28 @@
                 return $return;
             }
 
+            //pega todos os serviços
+            public function getAllServices(){
+                $get = new AboutDao;
+                $all = $get->getAllServices();
+
+                echo $all;
+                return $all;
+            }
+
+            //UPDATE ON SERVICES
+            public function updateAboutService(){
+                $id = $_POST['id'];
+                $title = $_POST['title'];
+                $post = $_POST['post'];
+
+                $up = new AboutDao();
+                $return = $up->updateService($id , $title , $post);
+
+                echo $return;
+                return $return;
+            }
+
 
     }
 

@@ -1,7 +1,47 @@
-<div class="divService">
-    <label>TITULO</label>
-    <input type="text" id="titleService">
-    <label>DESCRIÇÃO</label>
-    <textarea id="postService"></textarea>
-    <button id="sendService" class="btn right">ENVIAR</button>
+<div class="row">
+    <div class="col s12">
+        <ul class="tabs">
+        <li class="tab col s6"><a class="active" href="#divSendFileService">ENVIAR</a></li>
+        <li id="loadServices" class="tab col s6"><a href="#showFilesService">POSTS</a></li>
+        </ul>
+    </div>
+
+    <div id="divSendFileService" class="col s12">
+
+        <div class="divService">
+            <label>TITULO</label>
+            <input type="text" id="titleService">
+            <label>DESCRIÇÃO</label>
+            <textarea id="postService"></textarea>
+            <button id="sendService" class="btn right">ENVIAR</button>
+        </div>
+
+    </div>
+
+
+    <div id="showFilesService" class="col s12">
+        <!-- PRELOAD-->
+        <div id="preloadService" class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="listServiceFiles">
+            
+        </div>
+    </div>
+
+
+
 </div>
+
+
+
+<div w3-include-html="../modal/modalCardService.html"></div>

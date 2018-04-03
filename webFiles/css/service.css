@@ -9,3 +9,33 @@
 .divService .btn {
     margin: 1%;
 }
+#preloadService {
+    margin-top: 5%;
+    margin-left: 45%;
+}
+#showFilesService {
+    padding: 3%;
+    height: 350px;
+    overflow: auto;
+}
+.cardService {
+    margin: 1%;
+    border: solid 1px gray;
+    border-radius: 5px;
+}
+#deleteCard {
+    color:red;
+    top: 0;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.editCard {
+    color: #2C3B41;
+    top: 0;
+    margin-top: 5px;
+    cursor: pointer;
+}
+#modalCardService #postCardService {
+    resize: none;
+    height: 250px;
+}
