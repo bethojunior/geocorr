@@ -90,6 +90,18 @@
                 return $return;
             }
 
+            //delete service
+            public function deletService(){
+
+                $id = $_POST['id'];
+    
+                $delete = new AboutDao();
+                $return = $delete->deleteService($id);
+            
+                echo $return;
+                return $return;
+            }
+
 
     }
 

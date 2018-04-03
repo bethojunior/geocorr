@@ -42,9 +42,10 @@ function loadServices(){
                 list += 
                 "<div class='cardService col l12 m12 s12'>"+
                     "<h5 class='col l10'><b>" + title.toUpperCase() + "</h5></label>"+
-                    "<i id='deleteCard' class='col l1 material-icons'>delete</i>"+
-                    "<i value='" + id + "' class='col l1 material-icons editCard'>create</i>"+
-                    "<h6 class='col l12'><b>" + post + "</b></h6>"+
+                    "<button class='btn'><i value='" + id + "' id='deleteCard' class='deleteCard col l1 material-icons'>delete</i></button>"+
+
+                    "<button class='btn'><i value='" + id + "' class='col l1 material-icons editCard'>create</i></button>"+
+                    "<div class='divider'></div><h6 class='col l12'><b>" + post + "</b></h6>"+
                 "</div>";
 
             }
@@ -53,6 +54,12 @@ function loadServices(){
             for(let i in document.getElementsByClassName("editCard")){
                 document.getElementsByClassName("editCard")[i].onclick = function(){
                     openModalEditCard(this.getAttribute("value") , data);
+                }
+            }
+
+            for(let i in document.getElementsByClassName("deleteCard")){
+                document.getElementsByClassName("deleteCard")[i].onclick = function(){
+                    deleteCard(this.getAttribute("value"));
                 }
             }
             
@@ -98,7 +105,24 @@ function updateCard(){
         let data = res['result'];
 
         if(data == true){
+            loadServices();
             swal("" , "Modificado com sucesso" , "success");
+            $('#modalCardService').modal('close');
+        }else {
+            swal("ops.." , "Erro ao alterar card" , "error");
+        }
+    }
+}
+
+function deleteCard(id){
+    new ServiceController().deleteService(id , callback);
+    function callback(result){
+        let res = JSON.parse(result);
+        let data = res['result'];
+
+        if(data == true){
+            loadServices();
+            swal("" , "Apagado com sucesso" , "success");
             $('#modalCardService').modal('close');
         }else {
             swal("ops.." , "Erro ao alterar card" , "error");

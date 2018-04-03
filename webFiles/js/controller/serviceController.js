@@ -34,6 +34,19 @@ class ServiceController {
             }
         });
     }
+    
+    deleteService(id , callback){
+        $.ajax({
+            url:LOCAL+"/controller/AboutController.php?action=deletService",
+            method: "POST",
+            data:{"id" : id},
+            success: function(result){
+                callback(result);
+            },error: function(result){
+                swal("ERROR" ,"Erro na conexão com o banco de dados" , "error");
+            }
+        });
+    }
 
 
 }

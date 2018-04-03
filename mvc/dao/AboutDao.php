@@ -159,6 +159,27 @@
             }   
 
         }
+        
+        public function deleteService($id){
+            
+            try{
+                $conn = Connection::open(Connection::DB_MYSQL);
+                $query = ("DELETE FROM services where id = :id");
+                $query = $conn->prepare($query);
+                $query->bindParam(':id' , $id , PDO::PARAM_INT);
+                $query->execute();
+
+                if($query){
+                    return json_encode(['result' => true]);
+                }else {
+                    return json_encode(['result' => false]);
+                }
+
+            }catch(Execption $e){
+                return json_encode(['result' => false]);
+            }
+
+        }
 
 
 
