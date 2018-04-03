@@ -121,6 +121,14 @@
                 return $return;
             }
 
+            public function getAllCarousel(){
+                $get = new AboutDao();
+                $return = $get->getAllCarousel();
+
+                echo $return;
+                return $return;
+            }
+
 
     }
 

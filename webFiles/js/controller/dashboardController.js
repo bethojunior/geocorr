@@ -73,5 +73,14 @@ class DashboardController {
         });
     }
 
+    getAllCarousel(callback){
+        $.ajax({
+            url:LOCAL+"/controller/AboutController.php?action=getAllCarousel",
+            success:function(result){
+                callback(result);
+            }
+        });
+    }
+
 
 }

@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById("addUser").onclick = addUser;
         document.getElementById("cadUser").onclick = cadUser;
         document.getElementById("sendCarousel").onclick = sendCarousel;
+        document.getElementById("getAllCarousel").onclick = getAllCarousel;
     }
 
     function showNav(){

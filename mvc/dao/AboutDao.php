@@ -203,6 +203,30 @@
         }
 
 
+        //GET ALL COROUSEL
+        public function getAllCarousel(){
+
+            try{
+                $conn = Connection::open(Connection::DB_MYSQL);
+                $query = ("SELECT * from carousel ORDER BY id DESC");
+                $query = $conn->prepare($query);
+                $query->execute();
+
+                $all = $query->fetchAll(PDO::FETCH_OBJ);
+
+                if($query){
+                    return json_encode($all);    
+                }else {
+                    return json_encode(['result' => false]);
+                }
+
+            }catch(Exception $e){
+                return json_encode(['result' => false]);
+            }
+
+        }
+
+
 
 
     }

@@ -114,3 +114,10 @@ function sendCarousel(){
         }
     }
 }
+
+function getAllCarousel(){
+    new DashboardController().getAllCarousel(callback);
+    function callback(result){
+        console.log(result);
+    }
+}
