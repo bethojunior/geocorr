@@ -1,3 +1,7 @@
 .divFormCarousel {
     margin-top: 3%;
 }
+.divImagesCarousel img {
+    width: 100%;
+    max-height: 200px;
+}

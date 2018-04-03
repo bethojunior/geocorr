@@ -54,8 +54,12 @@ class DashboardController {
             method: "POST",
             data:form,
             success:function(result){
+                let data = JSON.stringify(result);
+                console.log(data);
                 callback(result);
             },error:function(result){
+                let data = JSON.stringify(result);
+                console.log(data);
                 swal("Erro ao conectar com banco de dados");
             },            
             cache: false,
@@ -65,7 +69,7 @@ class DashboardController {
                 var myXhr = $.ajaxSettings.xhr();
                 if (myXhr.upload) { // Avalia se tem suporte a propriedade upload
                     myXhr.upload.addEventListener('progress', function () {
-                        // faz alguma coisa durante o progresso do upload 
+                    // faz alguma coisa durante o progresso do upload 
                     }, false);
                 }
             return myXhr;

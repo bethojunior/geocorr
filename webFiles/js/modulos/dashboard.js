@@ -118,6 +118,19 @@ function sendCarousel(){
 function getAllCarousel(){
     new DashboardController().getAllCarousel(callback);
     function callback(result){
-        console.log(result);
+        let data = JSON.parse(result);
+        let src = "";
+        let list = "";
+        let caminho = "";
+
+        for(let i in data){
+            list += 
+            "<div class='col l4 m4 s12 divImagesCarousel'>"+
+                "<img class='' src='../../../files/carousel/" + data[i]['src'] + "'>"+
+            "</div>";
+    
+        }
+
+        document.getElementById("listImageCarousel").innerHTML = list;
     }
 }
