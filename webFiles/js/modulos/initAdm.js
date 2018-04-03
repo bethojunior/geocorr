@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById("sendFormFile").onclick = sendFileById;
         document.getElementById("loadServices").onclick = loadServices;
         document.getElementById("updateCard").onclick = updateCard;
+        document.getElementById("addUser").onclick = addUser;
+        document.getElementById("cadUser").onclick = cadUser;
     }
 
     function showNav(){
