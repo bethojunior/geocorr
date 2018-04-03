@@ -90,3 +90,27 @@ function sendAboutVision(){
         }
     }
 }
+
+function sendCarousel(){
+
+    let check = document.getElementById("carouselInput").value;
+    if(check == ""){
+        swal("OPS..." , "Não pode enviar formulário vazio" , "error");
+        return;
+    }
+         
+    let form = document.getElementById("formCarousel");
+    let dataForm = new FormData(form);
+
+    new DashboardController().sendCarousel(dataForm , callback);
+    function callback(result){
+        let res = JSON.parse(result);
+        let data = res['result'];
+        document.getElementById("carouselInput").value = "";
+        if(data == true){
+            swal("" , "Enviado com sucesso" , "success");
+        }else {
+            swal("OPS.." , "Erro ao enviar" , "error");
+        }
+    }
+}

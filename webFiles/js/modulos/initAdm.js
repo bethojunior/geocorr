@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById("updateCard").onclick = updateCard;
         document.getElementById("addUser").onclick = addUser;
         document.getElementById("cadUser").onclick = cadUser;
+        document.getElementById("sendCarousel").onclick = sendCarousel;
     }
 
     function showNav(){

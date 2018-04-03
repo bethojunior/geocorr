@@ -181,6 +181,27 @@
 
         }
 
+        //INSERE CAROUSEL
+        public function insertAboutCarousel($src){
+            try{
+                $conn = Connection::open(Connection::DB_MYSQL);
+                $query = ("INSERT INTO carousel (src) VALUES (:src)");
+                $query = $conn->prepare($query);
+                $query->bindParam(':src' , $src , PDO::PARAM_STR);
+
+                $query->execute();
+
+                if($query){
+                    return json_encode(['result' => true]);
+                }else {
+                    return json_encode(['result' => false]);
+                }
+
+            }catch(Exception $e){
+                return json_encode(['result' => false]);
+            }
+        }
+
 
 
 

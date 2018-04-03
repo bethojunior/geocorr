@@ -1,4 +1,5 @@
 <?php  
+    require_once "../dao/BlogDao.php";
     class BlogController{
 
         public function __construct($action)
@@ -15,7 +16,7 @@
         }
 
         public function insertPost(){
-            require_once "../dao/BlogDao.php";
+            
             date_default_timezone_set('America/Fortaleza');
         
             $titleBlog = $_POST['titleBlog'];

@@ -1,6 +1,7 @@
 <?php   
 
     require "../dao/AboutDao.php";
+    date_default_timezone_set('America/Fortaleza');
     class AboutController{
         
             public function __construct($action)
@@ -98,6 +99,24 @@
                 $delete = new AboutDao();
                 $return = $delete->deleteService($id);
             
+                echo $return;
+                return $return;
+            }
+
+            //INSERT CAROUSEL
+            public function insertAboutCarousel(){
+
+                $data =  date('d-m-y-H-i-s');
+                $titulo = $data;
+                
+                $ext = strtolower(substr($_FILES['carousel']['name'],-4)); 
+                $new_name = ($titulo.$ext); 
+                $dir = '../../files/carousel/';
+                move_uploaded_file($_FILES['carousel']['tmp_name'], $dir.$new_name);
+
+                $insert = new AboutDao();
+                $return = $insert->insertAboutCarousel($new_name);
+                
                 echo $return;
                 return $return;
             }
