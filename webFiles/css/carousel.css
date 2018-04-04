@@ -1,7 +1,18 @@
 .divFormCarousel {
     margin-top: 3%;
 }
+.imagesCarosel {
+    border: solid 1px gray;
+    border-radius: 7px;
+}
+.divImagesCarousel {
+    cursor: pointer;
+    margin: 5%;
+}
 .divImagesCarousel img {
     width: 100%;
     max-height: 200px;
+}
+.idImg {
+    display: none;
 }

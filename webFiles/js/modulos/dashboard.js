@@ -126,10 +126,19 @@ function getAllCarousel(){
         for(let i in data){
             list += 
             "<div class='col l4 m4 s12 divImagesCarousel'>"+
-                "<img class='' src='../../../files/carousel/" + data[i]['src'] + "'>"+
+                "<div class='divImg'>"+
+                    "<input class='idImg' value='" + data[i]['id'] + "'>"+
+                    "<img src='../../../files/carousel/" + data[i]['src'] + "'>"+
+                "</div>"+
             "</div>";
     
         }
+
+        // for(let i in document.getElementsByClassName("idImg")){
+        //     document.getElementsByClassName("idImg")[i].onclick = function(){
+        //         console.log(this.getAttribute("value"));
+        //     }
+        // }
 
         document.getElementById("listImageCarousel").innerHTML = list;
     }
