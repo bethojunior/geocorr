@@ -41,14 +41,14 @@
 }
 .divConteudo {
     padding: 5%;
-    margin-top: 3%;
+    margin-top: 8%!important;
     font-family: "Montserrat";
 }
 .colorGreen {
     color: #008800;
 }
 .headerBlog span {
-    font-size: 18pt;
+    font-size: 30pt;
     font-weight: bold;
 }
 .divConteudo .hrGreen {
@@ -60,9 +60,9 @@
     overflow: auto;
     margin-top: 6%;
     color: white;
-    font-weight: bold;
     text-align: justify;
     background-color: #008800;
+    border-radius: 7px;
     max-height: 300px;
     min-height: 300px;
 }
@@ -88,6 +88,7 @@
     font-weight: bold;
 }
 .titlePostLastsBlog {
+    text-transform: uppercase;
     cursor: pointer;
     font-family: "Raleway";
     font-weight: none;
@@ -95,6 +96,8 @@
 
 .readMore{
     cursor: pointer;
+    font-size: 13pt;
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 600px) {
