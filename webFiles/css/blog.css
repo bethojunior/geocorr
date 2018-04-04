@@ -14,3 +14,88 @@
 .geralBlog .btn {
     margin-top: 2%;
 }
+
+/*  PAGINA BLOG */
+.divGeralBlog .navBlog {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    height: 80px;
+}
+.divGeralBlog .navBlog img {
+    width: 7%!important;
+    margin: 1%;
+}
+
+.listNav {
+    color: black;
+    font-family: "Montserrat";
+    cursor: pointer;
+    font-weight: bold;
+}
+.nameBlog {
+    text-decoration: underline;
+}
+.divOptionsNav {
+    margin-top: 1%;
+}
+.divConteudo {
+    padding: 5%;
+    margin-top: 3%;
+    font-family: "Montserrat";
+}
+.colorGreen {
+    color: #008800;
+}
+.headerBlog span {
+    font-size: 18pt;
+    font-weight: bold;
+}
+.divConteudo .hrGreen {
+    width: 60%;
+    border: solid 2px #008800;
+    border-radius: 10px;
+}
+.previewLast {
+    overflow: auto;
+    margin-top: 6%;
+    color: white;
+    font-weight: bold;
+    text-align: justify;
+    background-color: #008800;
+    max-height: 300px;
+    min-height: 300px;
+}
+
+.titlePostBlog {
+    font-weight: 900;
+    font-size: 18pt;
+    text-transform: uppercase;
+}
+#listNoticias {
+    margin-top: 5%;
+}
+.imgPosts {
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+.listDataPosts {
+    height: auto;
+    margin: 1%;
+    padding: 1%;
+}
+.postBlog {
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+.titlePostLastsBlog {
+    font-family: "Raleway";
+    font-weight: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .previewLast {
+        display: none;
+    }
+}

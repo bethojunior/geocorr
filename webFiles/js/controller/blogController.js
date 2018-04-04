@@ -29,4 +29,13 @@ class BlogController{
 
     }
 
+    getAllPosts(callback){
+        $.ajax({
+            url: LOCAL+"/controller/BlogController.php?action=getAll",
+            success:function(result){
+                callback(result);
+            }
+        });
+    }
+
 }   

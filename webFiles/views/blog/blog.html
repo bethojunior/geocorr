@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>BLOG  - GEOCORR</title>
+        <link rel="shortcut icon" href="../../images/logo.png" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="../..//Materialize/css/materialize.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|PT+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="../../css/blog.css" rel="stylesheet">
+        <script src="../../js/libs/jquery-3.2.1.js"></script>
+        <script src="../../Materialize/js/materialize.js"></script>
+    </head>
+    <body onload="loadDataBlog()">
+
+
+
+        <div w3-include-html="containerBlog.html"></div>
+    
+        <script src="../../js/ultils/import-html-w3.js"></script>
+        <script>
+            w3.includeHTML();
+        </script>
+
+
+
+        <script>  
+            $('.carousel.carousel-slider').carousel({fullWidth: true});
+
+            $(document).ready(function(){
+                $('.modal').modal();
+            });
+
+            $(document).ready(function(){
+            $('.tooltipped').tooltip({delay: 50});
+            });
+
+            
+            $(".button-collapse").sideNav();
+        </script>
+
+    <script src="../../js/ultils/host.js"></script>
+    <script src="../../js/modulos/init.js"></script>
+    <script src="../../js/modulos/index.js"></script>
+    <script src="../../js/ultils/sweetalert.min.js"></script>
+    <script src="../../js/controller/blogController.js"></script>
+    <script src="../../js/modulos/blog.js"></script>
+    </body>
+
+</html>

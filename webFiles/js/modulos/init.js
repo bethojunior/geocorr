@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-    document.getElementById("optionOne").onclick = alertaTest;
+    //document.getElementById("optionOne").onclick = alertaTest;
     document.getElementById("tituleFirstDiv").onclick = alerta2Test;
     document.getElementById("search").onclick = search;
     document.getElementById("modalSendMail").onclick = modalSendMail;
