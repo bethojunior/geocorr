@@ -1,5 +1,6 @@
 <?php  
     require_once "../dao/BlogDao.php";
+    require "../lib/WideImage.php";
     class BlogController{
 
         public function __construct($action)
@@ -28,6 +29,15 @@
             $new_name = ($titulo.$ext); 
             $dir = '../../files/posts/';
             move_uploaded_file($_FILES['imagem']['tmp_name'], $dir.$new_name); 
+
+            
+            //IMAGENS MEDIUM
+            $img = WideImage::load($dir.$new_name);
+            //REDIMENCIONAR IMAGEM
+            $red = $img->resize(300,300);
+            //SALVANDO EM QUALQUER FORMATO
+            $red->saveToFile($dir.'medium/'.$new_name);
+
         
             $blog = new BlogDao();
             $return = $blog->insertPost($titleBlog , $postBlog , $dataBlog , $new_name);

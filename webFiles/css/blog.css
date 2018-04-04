@@ -75,10 +75,8 @@
 #listNoticias {
     margin-top: 5%;
 }
-.imgPosts {
-    text-align: center;
-    width: auto;
-    height: auto;
+.listDataPosts .imgPosts {
+    width: 100%;
 }
 .listDataPosts {
     height: auto;
@@ -90,8 +88,13 @@
     font-weight: bold;
 }
 .titlePostLastsBlog {
+    cursor: pointer;
     font-family: "Raleway";
     font-weight: none;
+}
+
+.readMore{
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
