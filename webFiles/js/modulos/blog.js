@@ -29,13 +29,16 @@ function loadDataBlog(){
         let txt = "";
         let path = "../../../files/posts/medium/";
         
-
+        console.log(data);
         for(let i in data){
 
             let textPost = data[i]['postBlog'];
             let post = textPost.substr(0, 500);
             let src = ""
             let image = data[i]['src'];
+
+            let date = data[i]['dataBlog'];
+            let dataFormatada = date.substr(0 , 8);
 
             if(image == "" || image == null){
                 image = "";
@@ -51,6 +54,7 @@ function loadDataBlog(){
                 "<div class='col l8'>"+
                     "<span class='titlePostBlog'>" + data[i]['titleBlog'] + "</span>"+
                     "<br>"+
+                    "<label class='right'>PUBLICADO EM " + dataFormatada + " </label>"+
                     "<p class='postBlog'>" + post + "</p>"+
                 "</div>"+
                 "<label value='" + data[i]['id'] + "' class='right colorGreen readMore'>CONTINUAR LENDO</label>"+
@@ -88,12 +92,12 @@ function getLastsPosts(){
         for(let i in data){
 
             let titleBlog = data[i]['titleBlog'];
-            let title = titleBlog.substr(0,13);
+            let title = titleBlog.substr(0,20);
             let post = data[i]['postBlog'];
 
             txt += 
             "<div class='listDataPosts'>" + 
-                "<span title='" + post + "' class='titlePostLastsBlog'>" + data[i]['titleBlog'] + "</span>"+
+                "<span title='" + post + "' class='titlePostLastsBlog'>" + title + "</span>"+
             "</div>";
         }
 
