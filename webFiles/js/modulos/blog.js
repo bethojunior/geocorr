@@ -72,16 +72,6 @@ function loadDataBlog(){
     }
 }
 
-function openBlogComplet(id , data){
-    let blogSelect = "";
-    for(let i in data){
-        if(data[i]['id'] == id){
-            alert(data[i]['titleBlog']);
-        }
-    }
-
-}
-
 function getLastsPosts(){
     new BlogController().getAllPosts(callback);
     function callback(result){
@@ -105,3 +95,32 @@ function getLastsPosts(){
 
     }
 }
+
+function openBlogComplet(id , data){
+    document.getElementById("divBlogList").style.display = "none";
+    document.getElementById("divPostComplet").style.display = "block";
+
+    let list = "";
+    let postSelect = "";
+
+    for(let i in data){
+        if(data[i]['id'] == id){
+            postSelect = data[i];
+
+            let date = postSelect['dataBlog'];
+            let dataFormatada = date.substr(0 , 8);
+
+            list += 
+            "<div>"+
+                "<hr class='col l12 m12 s12 hrGreen'>"+
+                "<h4><b>" + postSelect['titleBlog'] + "</b></h4>"+
+                "<label>" + dataFormatada + "</label>"+
+                "<p class='col l8'>" + postSelect['postBlog'] + "</p>"+
+            "</div>";
+        }
+        document.getElementById("postComplet").innerHTML = list;
+    }
+
+
+}
+
